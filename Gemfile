@@ -80,3 +80,5 @@ gem "friendly_id", "~> 5.5"
 ############### DEPLOYED APP    ############
 gem 'platform_sh_rails'
 gem 'unicorn', '~> 6.1', :group => :production
+
+gem "devise", "~> 4.9"

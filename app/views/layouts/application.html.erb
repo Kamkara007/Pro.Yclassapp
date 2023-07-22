@@ -34,12 +34,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <%= render "shared/header/styles" %>
-  </head>
-
-  <body class="bg-gray-200">
+<body class="bg-gray-200">
     <%= render "shared/analytics/analytics_frame" %>
-      <%= yield %>
+    <%= yield %>
     <%= render "shared/footer/javascript" %>
-  </body>
+</body>
+
 </html>
