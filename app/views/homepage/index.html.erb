@@ -1,6 +1,7 @@
 <% @title="Accueil" %>
 <% if user_signed_in? %>
     <%= render "homepage/shared/index" %>
+    
 <% else %>
     <%= render "homepage/pages/index" %>
 <% end %>
