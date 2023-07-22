@@ -1,0 +1,16 @@
+<!-- feed New Exercice -->
+<div class="border rounded-md mb-1">
+    <!-- Exercice Title -->
+    <div class="bg-gray-100 p-2">
+        <h2 class="font-semibold">
+            <%= link_to new_exercise_result_path(exercise) do %>
+                <%= exercise.title %>
+            <% end %>
+        </h2>
+    </div>
+    <!-- Exercices Feature-->
+    <div class="flex justify-around m-2 ">
+        <p class="flex ">  <%= exercise.questions.count %> Donnez</p>
+        <p class="flex"> <%= exercise.questions.count %> x traités</p>
+    </div>
+</div>

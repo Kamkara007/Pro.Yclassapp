@@ -5,10 +5,10 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+<div class="max-w-md">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"ln-field" %>
+</div>
 <div class="py-2 max-w-md">
     <div class="grid grid-cols-1 ">
         <span class="">Nom:</span>
@@ -68,7 +68,8 @@
 
 
 
-  <div class="field">
+<div class="max-w-md">
+
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -76,7 +77,8 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+<div class="max-w-md">
+
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>

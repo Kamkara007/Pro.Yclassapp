@@ -1,0 +1,39 @@
+<div id="<%= dom_id course %>" class="border bg-white p-2">
+
+  <div class="my-5 font-bold text-xl">
+    <%= course.title %>
+  </div>
+
+
+  <div class="my-5">
+    <%= course.content %>
+  </div>
+
+<div class="flex justify-between">
+  <p class="my-5">
+    <strong class="block font-bold mb-1">Niveau:</strong>
+    <%= course.level_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-bold mb-1">Matiere:</strong>
+    <%= course.material_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-bold mb-1">Statut:</strong>
+    <%= course.statut_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Auteur:</strong>
+Prof :<%= course.user.full_name %>
+
+  </p>
+</div>
+  <% if action_name != "show" %>
+    <%= link_to "Show this course", course, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this course', edit_course_path(course), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :courses
+  resources :materials
+  resources :levels
    ################## LEARN POD  ##########################
   get "new-article", to:"articles#new"
   get "articles", to:"articles#index"

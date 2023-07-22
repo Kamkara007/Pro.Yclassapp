@@ -74,16 +74,12 @@
     </div>
     <div class="navbar-end">
         <% if current_user_status == "student" %>
-            <% if current_user.abonnement == "plan gratuit" %>
+            
                 <%#= link_to  "Espace Recompense", students_path, class:"block px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" %>
                 <label class="block px-2 py-1 mt-2 bg-white font-bold text-md rounded-lg  md:mt-0" for="abonnement_modal">
                     S'Abonnez
                 </label>
-            <% else %>
-                <%= link_to "invitation", class:"block px-2 py-1 mt-2 bg-white font-bold text-md rounded-lg  md:mt-0" do %>
-                    Gagnez Argent
-                <% end %>
-            <% end %>
+           
 
         <% elsif current_user_status == "ambassador"   %>
             <%= link_to  "Espace Partenaire", ambassadors_path, class:"block px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" %>
