@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
-  get 'dashboard/school'
-  get 'dashboard/teacher'
-  resources :courses
-  resources :materials
-  resources :levels
+ 
    ################## LEARN POD  ##########################
   get "new-article", to:"articles#new"
   get "articles", to:"articles#index"
@@ -13,11 +8,7 @@ Rails.application.routes.draw do
   ################## COURSES  ##########################
   get "new-course", to:"courses#new"
   resources :courses, except:[:new]
-  
-  ################## STATUTS  ##########################
-  get "new-statut", to:"statuts#new"
-  resources :statuts, except:[:new]
-  
+
   
   ################## MATERIALS  ##########################
   get "new-material", to:"materials#new"
@@ -27,9 +18,10 @@ Rails.application.routes.draw do
   get "new-level", to:"levels#new"
   resources :levels, except:[:new]
   
+  ################## DASHBOARD  ##########################
   get "dashboard", to:'dashboard#index'
-  get 'dashboard/home'
-  
+  get "espace-school", to:'dashboard#school'
+  get "espace-teacher", to:'dashboard#teacher'
 
   ################## USERS  ##########################
   devise_scope :user do
