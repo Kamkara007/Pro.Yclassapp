@@ -16,17 +16,22 @@
                 <!-- Cached Course content-->
                     <% cache do %>
                     <!-- Embed in turbo_frame -->
-                    <%= turbo_frame_tag dom_id(feed_course.content) do %>
-                        <%= link_to course_path(feed_course) do %>
-                            <%= truncate(strip_tags(feed_course.content.to_s.html_safe), length: 200) %>
-                            <span class="ln-feed-show">Voir plus</span>
+                    <!-- Embed in turbo_frame -->
+                        <div id="feed_course_summary" onclick="planbac2023.showModal()">
+                            <div class="feed_course_summary_content">        
+                                <%= truncate(strip_tags(feed_course.content.to_s.html_safe), length: 200) %>                     
+                                <span class="ln-feed-show"  >Voir plus</span>
                             <%= image_tag 'photo-1.jpg', class:"pt-2" %>
-                        <% end %>
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
-                            <a href="#slide4" class="btn btn-circle">❮</a>
-                            <a href="#slide2" class="btn btn-circle">❯</a>
+                            <div class="absolute flex justify-between transform -translate-y-1/2 left-0 right-0 top-1/2">
+                                <a href="#slide4" class="btn btn-circle">❮</a>
+                                <a href="#slide2" class="btn btn-circle">❯</a>
+                            </div>
+                            </div>
                         </div>
-                    <% end %>
+
+                        <div id="feed_course_full" class="hidden_feed_full_content">
+                            <%= feed_course.content.to_s.html_safe %>
+                        </div>
                     <% end %>
                 </div>
             </div>

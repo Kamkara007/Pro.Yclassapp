@@ -21,10 +21,10 @@ class ApplicationController < ActionController::Base
     private
 
         def set_materials
-            #@materials = Material.all
+            @materials = Material.all
         end
 
         def set_levels
-            #@levels = Level.all
+            @levels = Level.all
         end
 end
