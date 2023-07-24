@@ -1,0 +1,37 @@
+<% @title="Accueil" %>
+<!-- Navbar Items -->
+<%= render "homepage/feeds/navbar" %>
+<div class="container md:mx-auto mt-20">
+    <div class="flex flex-wrap md:flex-row flex-col">
+        <!-- Left side -->
+        <div class="w-full md:w-1/4 md:px-6 md:pt-4 border">
+            <div class="py-2">
+                <%= render "homepage/feeds/user_profil" %>
+            </div>
+            <div class="py-2">
+                <%= render "homepage/feeds/material" %>
+            </div>
+        </div>
+
+        <!-- Contents && Feed -->
+        <div class="w-full md:w-2/4 md:p-2">
+            <div class="py-2">
+                <%= render "homepage/feeds/current_user_box" %>
+            </div>
+            <div class="">
+                <%= render "homepage/feeds/contents" %>
+            </div>
+        </div>
+
+        <!-- User Profil-->
+        <div class="w-full md:w-1/4 p-2 hidden md:block border">
+            <%= render "homepage/feeds/school" %>
+            <div class="py-2">
+            <%= render "homepage/feeds/exercises" %>
+            </div>
+            <div class="py-2">
+            <%= render "homepage/feeds/legal" %>
+            </div>
+        </div>
+    </div>
+</div>
