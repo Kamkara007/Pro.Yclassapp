@@ -1,34 +1,30 @@
-<div class="bg-white rounded-md">
+<div class="bg-white rounded-md ">
     <h2 class="p-2 ">Exercises</h2>
     <p class="inset-x-0 top-0 z-50 h-0.5 mt-0.5 bg-blue-600"></p>
     <ul class="flex flex-wrap md:flex-col ">
 
-        <%# cache do %>
-            
-            <%# end %>
+        <div class="overflow-x-auto">
+            <table class="table">
+                <tbody>
+                    <% @feed_materials.each do |fm| %>
+                        <li
+                            class="flex md:w-full p-2">
+                            <!-- row 1 -->
+                            <tr>
+                                <td><%= link_to fm.title, fm, data:{ turbo_frame: "material_feed" }, class:"no-underline font-semibold text-black" %></td>
+                                <td>
+                                    <div class="indicator">
+                                        <span class="indicator-item badge badge-secondary">0+</span>
+                                        exercices
+                                    </div>
+                                </td>
 
-<div class="overflow-x-auto">
-    <table class="table">
-        <tbody>
-<% @feed_materials.each do |fm| %>
-    <li class="flex md:w-full p-2">
-            <!-- row 1 -->
-            <tr>
-                <td><%= link_to fm.title, fm, data:{ turbo_frame: "material_feed" }, class:"no-underline font-semibold text-black" %></td>
-<td>
-    <div class="indicator">
-        <span class="indicator-item badge badge-secondary">0+</span>
-        exercices
-    </div>
-</td>
+                            </tr>
 
-            </tr>
-           
-    </li>
-<% end %>
-        </tbody>
-    </table>
+                        </li>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </ul>
 </div>
-        </ul>
-    </div>
-
