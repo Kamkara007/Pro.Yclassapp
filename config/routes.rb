@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :articles
- 
+  
+  ################## DOCUMENTS  ##########################
+  get "documents", to:'document#index'
+
+
+  ################## MINI PROGRAMS  ##########################
+  get 'min-programs', to:"miniprogram#index"
+
+
    ################## LEARN POD  ##########################
   get "new-article", to:"articles#new"
   get "articles", to:"articles#index"

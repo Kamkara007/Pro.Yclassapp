@@ -47,17 +47,17 @@
                 <%= link_to 'Accueil', root_path %>
             </li>
             <li>
-                <%= link_to 'Bac Blancs', root_path %>
+                <%= link_to 'Mini-Program', 'min-programs' %>
             </li>
-            <li>
-                <%= link_to 'Probables au Bac 2023', root_path %>
-            </li>
-
-            <li>
-                <%= link_to 'Invitations', "invitation" %>
+            <li class="mx-4">
+                <%= link_to 'Documents', "documents" %>
             </li>
 
-            <div class="avatar">
+            <li>
+                <%= link_to 'Espace Enseignant', dashboard_path %>
+            </li>
+
+            <div class="avatar ml-4">
                 <%= link_to  root_path do %>
                     <% member_avatar = "#{[current_user.first_name.first, current_user.last_name.first].join('')}"  %>
                     <div class="w-12 rounded-full">
@@ -75,12 +75,6 @@
     </div>
     <div class="navbar-end">
         <% if current_user_status == "student" %>
-
-            <%#= link_to  "Espace Recompense", students_path, class:"block px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" %>
-            <label class="block px-2 py-1 mt-2 bg-white font-bold text-md rounded-lg  md:mt-0" for="abonnement_modal">
-                S'Abonnez
-            </label>
-
 
             <% elsif current_user_status == "ambassador"   %>
             <%= link_to  "Espace Partenaire", ambassadors_path, class:"block px-4 py-2 mt-2 text-sm font-semibold bg-white rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" %>
